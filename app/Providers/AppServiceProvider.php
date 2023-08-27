@@ -3,22 +3,17 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Livewire\Livewire;
+use App\Livewire\CountdownTimer;
+
 
 class AppServiceProvider extends ServiceProvider
 {
-    /**
-     * Register any application services.
-     */
-    public function register(): void
+    public function boot()
     {
-        //
-    }
+        Livewire::component('countdown-timer', CountdownTimer::class);
+       // Livewire::component('countdown-timer', \App\Livewire\CountdownTimer::class);
 
-    /**
-     * Bootstrap any application services.
-     */
-    public function boot(): void
-    {
-        //
     }
 }
+
