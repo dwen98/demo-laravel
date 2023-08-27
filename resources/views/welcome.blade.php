@@ -17,9 +17,9 @@
         <!-- resources/views/welcome.blade.php -->
 
 <script>
-   setInterval(function () {
-    Livewire.emit('updateCountdown');
-}, 1000); // Update every second
+ //  setInterval(function () {
+ //   Livewire.emit('updateCountdown');
+//}, 1000); // Update every second
 
 </script>
 <script src="{{ asset('livewire/livewire.js') }}"></script>
@@ -29,7 +29,7 @@
     <body class="antialiased">
         @livewire('countdown-timer')
         <script>
-          //  Livewire.on('countdownUpdated', countdown => {
+            Livewire.on('countdownUpdated', countdown => {
                 // Update the countdown data in the browser
                 // This will automatically update the displayed countdown
                 // Livewire components on the page will be re-rendered
